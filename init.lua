@@ -77,6 +77,7 @@ require('packer').startup(function(use)
     use 'LnL7/vim-nix'
     use 'alx741/yesod.vim'
     use '5outh/yesod-routes.vim'
+    use 'bakpakin/fennel.vim'
 
     -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
     local has_plugins, plugins = pcall(require, 'custom.plugins')
