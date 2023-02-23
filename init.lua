@@ -77,6 +77,7 @@ require('packer').startup(function(use)
     use 'alx741/yesod.vim'
     use '5outh/yesod-routes.vim'
     use 'bakpakin/fennel.vim'
+    use 'vmchale/dhall-vim'
 
     -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
     local has_plugins, plugins = pcall(require, 'custom.plugins')
@@ -370,7 +371,7 @@ else
 end
 require('lspconfig')['hls'].setup {cmd = haskell_cmd, on_attach = on_attach}
 require('lspconfig')['nil_ls'].setup {}
-require('lspconfig')['pyright'].setup {}
+require('lspconfig')['dhall_lsp_server'].setup {}
 
 -- Turn on lsp status information
 require('fidget').setup()
