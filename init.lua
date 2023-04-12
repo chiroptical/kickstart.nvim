@@ -367,6 +367,8 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 local haskell_cmd
 if os.getenv('USE_HALFSP') then
     haskell_cmd = {'halfsp'}
+elseif os.getenv('USE_STATICLS') then
+    haskell_cmd = {'static-ls'}
 else
     haskell_cmd = {'haskell-language-server-wrapper', '--lsp'}
 end
