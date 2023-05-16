@@ -79,6 +79,7 @@ require('packer').startup(function(use)
     use 'bakpakin/fennel.vim'
     use 'vmchale/dhall-vim'
     use 'kaarmu/typst.vim'
+    use 'gleam-lang/gleam.vim'
 
     -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
     local has_plugins, plugins = pcall(require, 'custom.plugins')
