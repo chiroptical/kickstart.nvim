@@ -376,6 +376,8 @@ end
 require('lspconfig')['hls'].setup {cmd = haskell_cmd, on_attach = on_attach}
 require('lspconfig')['nil_ls'].setup {}
 require('lspconfig')['dhall_lsp_server'].setup {}
+require('lspconfig')['erlangls'].setup {}
+require('lspconfig')['rls'].setup {cmd = {'rust-analyzer'}, on_attach = on_attach}
 
 -- Turn on lsp status information
 require('fidget').setup()
