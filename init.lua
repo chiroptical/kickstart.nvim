@@ -73,6 +73,10 @@ require('packer').startup(function(use)
         cond = vim.fn.executable 'make' == 1
     }
 
+    -- Misc
+    use 'mattn/emmet-vim'
+
+    -- Syntax, some of these should probably use treesitter
     use 'LnL7/vim-nix'
     use 'alx741/yesod.vim'
     use '5outh/yesod-routes.vim'
@@ -246,7 +250,7 @@ require('nvim-treesitter.configs').setup {
     -- Add languages to be installed here that you want installed for treesitter
     ensure_installed = {
         'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'help', 'vim',
-        'haskell'
+        'haskell', 'elixir', 'heex', 'eex', 'html'
     },
 
     highlight = {enable = true},
@@ -378,6 +382,7 @@ require('lspconfig')['nil_ls'].setup {}
 require('lspconfig')['dhall_lsp_server'].setup {}
 require('lspconfig')['erlangls'].setup {}
 require('lspconfig')['rls'].setup {cmd = {'rust-analyzer'}, on_attach = on_attach}
+require('lspconfig')['elixirls'].setup {cmd = {'elixir-ls'}, on_attach = on_attach}
 
 -- Turn on lsp status information
 require('fidget').setup()
