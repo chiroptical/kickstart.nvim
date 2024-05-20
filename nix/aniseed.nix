@@ -1,12 +1,12 @@
 {pkgs, ...}: let
-  aniseed = pkgs.vimUtils.buildVimPluginFrom2Nix {
+  aniseed = pkgs.vimUtils.buildVimPlugin {
     pname = "aniseed";
     version = "v3.32.0";
     src = pkgs.fetchFromGitHub {
       owner = "Olical";
       repo = "aniseed";
-      rev = "a7445c340fb7a0529f3c413eb99d3f8d29f50ba2";
-      sha256 = "sha256-KTNImPjifuoj0/ahuYcqMtutGgOR4XnYruv/JVjyrTk=";
+      rev = "v3.33.0";
+      sha256 = "sha256-0000000000000000000000000000000000000000000=";
     };
     meta.homepage = "https://github.com/Olical/aniseed";
   };
