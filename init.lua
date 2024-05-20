@@ -377,10 +377,15 @@ elseif os.getenv('USE_STATICLS') then
 else
     haskell_cmd = {'haskell-language-server-wrapper', '--lsp'}
 end
+if os.getenv('USE_ELP') then
+    erlang_cmd = {'elp', 'server'}
+else
+    erlang_cmd = {'erlang_ls'}
+end
 require('lspconfig')['hls'].setup {cmd = haskell_cmd, on_attach = on_attach}
 require('lspconfig')['nil_ls'].setup {}
 require('lspconfig')['dhall_lsp_server'].setup {}
-require('lspconfig')['erlangls'].setup {}
+require('lspconfig')['erlangls'].setup {cmd = erlang_cmd}
 require('lspconfig')['rls'].setup {
     cmd = {'rust-analyzer'},
     on_attach = on_attach
