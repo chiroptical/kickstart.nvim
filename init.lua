@@ -83,7 +83,6 @@ require('packer').startup(function(use)
     use 'bakpakin/fennel.vim'
     use 'vmchale/dhall-vim'
     use 'kaarmu/typst.vim'
-    use 'gleam-lang/gleam.vim'
 
     -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
     local has_plugins, plugins = pcall(require, 'custom.plugins')
@@ -195,8 +194,8 @@ require('lualine').setup {
 require('Comment').setup()
 
 -- Add cursor and line columns
-vim.o.cursorcolumn = 1
-vim.o.cursorline = 1
+vim.o.cursorcolumn = true
+vim.o.cursorline = true
 
 -- Gitsigns
 -- See `:help gitsigns.txt`

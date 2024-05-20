@@ -6,7 +6,7 @@
       owner = "Olical";
       repo = "aniseed";
       rev = "v3.33.0";
-      sha256 = "sha256-0000000000000000000000000000000000000000000=";
+      sha256 = "sha256-8AynKSSKK7R4Y8lGqzPSu6j4o6uuZikhq9fW4Degps0";
     };
     meta.homepage = "https://github.com/Olical/aniseed";
   };
